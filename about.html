@@ -113,18 +113,20 @@
     }
 
     .bio-links a {
+      display: inline-block;
       font-family: var(--mono);
-      font-size: 0.8rem;
-      letter-spacing: 0.06em;
-      color: var(--ink);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--ink);
       text-decoration: none;
-      border-bottom: 1px solid var(--ink);
-      padding-bottom: 0.15rem;
-      width: fit-content;
-      transition: color 0.25s, border-color 0.25s;
+      padding: 0.75rem 1.5rem;
+      transition: opacity 0.2s;
     }
 
-    .bio-links a:hover { color: var(--muted); border-color: var(--muted); }
+    .bio-links a:hover { opacity: 0.75; }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(8px); }
@@ -144,7 +146,7 @@
   <header class="site-header">
     <a class="wordmark" href="/">Amelia Krupnik</a>
     <nav class="site-nav">
-      <a href="mailto:hello@ameliakrupnik.com">Marketing Advice</a><a href="/review">Plan Review</a><a href="/about" class="active">Meet Amelia</a>
+      <a href="/">Home</a><a href="/review">Plan Review</a><a href="/about" class="active">Meet Amelia</a>
     </nav>
   </header>
 
@@ -155,7 +157,7 @@
       <p>I work by email, on a fixed-price basis, with no meetings and no retainers.</p>
     </div>
     <div class="bio-links">
-      <a href="mailto:hello@ameliakrupnik.com">hello@ameliakrupnik.com</a>
+      <a href="mailto:hello@ameliakrupnik.com">Email me</a>
     </div>
   </div>
 
