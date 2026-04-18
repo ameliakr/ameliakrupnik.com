@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://ameliakrupnik.com/sitemap.xml
