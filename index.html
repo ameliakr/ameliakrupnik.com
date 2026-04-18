@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amelia Krupnik — Marketing Consulting</title>
+  <meta name="description" content="Senior marketing advice, entirely by email. 20 years of experience. No calls, no contracts. Just answers." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f5f2;
+      --ink: #1a1814;
+      --muted: #7a7670;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --mono: 'DM Mono', monospace;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page {
+      max-width: 600px;
+      padding: 4rem 2rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    h1 em { font-style: italic; }
+
+    .sub {
+      margin-top: 2rem;
+      font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 40ch;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.15s forwards;
+    }
+
+    .email {
+      margin-top: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.3s forwards;
+    }
+
+    .email a {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 0.15rem;
+      transition: color 0.25s, border-color 0.25s;
+    }
+
+    .email a:hover { color: var(--muted); border-color: var(--muted); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Marketing advice by email.</h1>
+    <div class="email">
+      <a href="mailto:hello@ameliakrupnik.com">hello@ameliakrupnik.com</a>
+    </div>
+  </div>
+</body>
+</html>
