@@ -312,21 +312,93 @@
     border-top: 1px solid var(--rule);
   }
 
-  .expander {
+  .included-label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 300;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .whats-included {
     margin-top: 1.5rem;
   }
 
   .post-cta-bullets {
     margin-top: 2rem;
   }
-    margin-top: 2.5rem;
+
+  .included-list {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     gap: 0;
   }
 
+  .review-bullets {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.85rem;
+  }
+
+  .review-bullets li {
+    font-family: var(--serif);
+    font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--muted);
+    padding: 0.4rem 0 0.4rem 1.25rem;
+    position: relative;
+  }
+
+  .review-bullets li::before {
+    content: "·";
+    position: absolute;
+    left: 0.3rem;
+    color: var(--muted);
+    font-size: 1.2rem;
+    line-height: 1.65;
+  }
+
+  .item-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 300;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color 0.2s;
+  }
+
+  .item-toggle:hover { color: var(--muted); }
+
+  .item-arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+    font-size: 0.65rem;
+    color: var(--muted);
+  }
+
+  .item-toggle[aria-expanded="true"] .item-arrow {
+    transform: rotate(180deg);
+  }
+
+  .item-body {
+    padding-top: 0.75rem;
+  }
+
   .included-item {
-    padding: 1.25rem 0;
+    padding: 1.75rem 0;
     border-top: 1px solid var(--rule);
   }
 
@@ -335,23 +407,25 @@
   }
 
   .included-item h3 {
-    font-family: var(--serif);
-    font-size: 1.1rem;
+    font-family: var(--mono);
+    font-size: 0.68rem;
     font-weight: 300;
-    color: var(--ink);
-    margin-bottom: 0.3rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
   }
 
   .included-item p {
     font-family: var(--serif);
-    font-size: 1rem;
+    font-size: clamp(1.05rem, 2.5vw, 1.2rem);
     font-weight: 300;
-    line-height: 1.6;
-    color: var(--muted);
+    line-height: 1.65;
+    color: var(--ink);
   }
 
   .included-meta {
-    margin-top: 1.5rem;
+    margin-top: 1.75rem;
     font-family: var(--mono);
     font-size: 0.68rem;
     font-weight: 300;
@@ -425,7 +499,7 @@
     <p class="hero-counter">Is it, though?</p>
 
     <div class="intro-para">
-      <p>You used AI to write your marketing plan. It's probably pretty good: thorough, clearly structured, covers the right territory. The question is whether it will actually work for you, with your resources, in your market, at your stage.</p>
+      <p>You used AI to write your marketing plan. It probably looks great on paper. The question is whether it will actually work for you, with your resources, in your market, at your stage.</p>
       <p>I've spent twenty years doing marketing for companies at every stage. I'll read your plan and give you a straightforward assessment of what's working, what isn't, and what to do about it. The kind of feedback that usually only comes from having a senior marketer on staff or hiring an expensive agency.</p>
     </div>
 
@@ -436,8 +510,119 @@
       </div>
     </div>
 
+    <div class="whats-included-trigger">
+      <span class="included-label">What's included</span>
+    </div>
+
+    <div class="whats-included">
+      <div class="mockup">
+        <svg width="100%" viewBox="158 0 482 360" role="img" aria-label="What's included in the Marketing Plan Review">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </marker>
+          </defs>
+          <rect x="164" y="42" width="196" height="256" rx="2" fill="#d8d4ce" opacity="0.5"/>
+          <rect x="158" y="36" width="196" height="256" rx="2" fill="#f7f5f2" stroke="#c8c4be" stroke-width="0.5"/>
+          <rect x="158" y="36" width="196" height="24" rx="2" fill="#e8e4de" stroke="#c8c4be" stroke-width="0.5"/>
+          <rect x="158" y="48" width="196" height="12" fill="#e8e4de"/>
+          <rect x="172" y="43" width="60" height="5" rx="1" fill="#7a7670" opacity="0.6"/>
+          <rect x="172" y="52" width="40" height="3" rx="1" fill="#7a7670" opacity="0.3"/>
+          <rect x="172" y="70" width="168" height="56" rx="1" fill="#f0ece6" stroke="#d8d4ce" stroke-width="0.5"/>
+          <rect x="180" y="78" width="55" height="4" rx="1" fill="#1a1814" opacity="0.5"/>
+          <rect x="180" y="88" width="118" height="3.5" rx="1" fill="#d8d4ce" opacity="0.9"/>
+          <rect x="308" y="86" width="20" height="8" rx="1" fill="#639922" opacity="0.85"/>
+          <rect x="180" y="97" width="118" height="3.5" rx="1" fill="#d8d4ce" opacity="0.9"/>
+          <rect x="308" y="95" width="20" height="8" rx="1" fill="#BA7517" opacity="0.85"/>
+          <rect x="180" y="106" width="118" height="3.5" rx="1" fill="#d8d4ce" opacity="0.9"/>
+          <rect x="308" y="104" width="20" height="8" rx="1" fill="#A32D2D" opacity="0.85"/>
+          <rect x="180" y="115" width="118" height="3.5" rx="1" fill="#d8d4ce" opacity="0.9"/>
+          <rect x="308" y="113" width="20" height="8" rx="1" fill="#639922" opacity="0.85"/>
+          <rect x="172" y="136" width="168" height="76" rx="1" fill="#f7f5f2" stroke="#d8d4ce" stroke-width="0.5"/>
+          <rect x="180" y="144" width="45" height="4" rx="1" fill="#1a1814" opacity="0.5"/>
+          <rect x="180" y="154" width="36" height="3" rx="1" fill="#7a7670" opacity="0.5"/>
+          <rect x="180" y="160" width="140" height="2.5" rx="1" fill="#d8d4ce" opacity="0.8"/>
+          <rect x="180" y="165" width="110" height="2.5" rx="1" fill="#d8d4ce" opacity="0.8"/>
+          <rect x="180" y="173" width="42" height="3" rx="1" fill="#7a7670" opacity="0.5"/>
+          <rect x="180" y="179" width="140" height="2.5" rx="1" fill="#d8d4ce" opacity="0.8"/>
+          <rect x="180" y="184" width="90" height="2.5" rx="1" fill="#d8d4ce" opacity="0.8"/>
+          <rect x="180" y="192" width="38" height="3" rx="1" fill="#7a7670" opacity="0.5"/>
+          <rect x="180" y="198" width="120" height="2.5" rx="1" fill="#d8d4ce" opacity="0.8"/>
+          <rect x="180" y="203" width="80" height="2.5" rx="1" fill="#d8d4ce" opacity="0.8"/>
+          <rect x="172" y="222" width="168" height="34" rx="1" fill="#f7f5f2" stroke="#d8d4ce" stroke-width="0.5"/>
+          <rect x="180" y="230" width="52" height="3.5" rx="1" fill="#1a1814" opacity="0.5"/>
+          <rect x="180" y="238" width="100" height="2.5" rx="1" fill="#d8d4ce" opacity="0.8"/>
+          <rect x="180" y="243" width="80" height="2.5" rx="1" fill="#d8d4ce" opacity="0.8"/>
+          <rect x="180" y="248" width="60" height="2.5" rx="1" fill="#d8d4ce" opacity="0.8"/>
+          <rect x="172" y="266" width="168" height="22" rx="1" fill="#f0ece6" stroke="#d8d4ce" stroke-width="0.5"/>
+          <rect x="180" y="273" width="38" height="3.5" rx="1" fill="#1a1814" opacity="0.5"/>
+          <rect x="230" y="274" width="90" height="2.5" rx="1" fill="#d8d4ce" opacity="0.6"/>
+          <line x1="354" y1="91" x2="400" y2="58" stroke="#c8c4be" stroke-width="0.5" stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+          <text x="406" y="58" font-family="'DM Mono', monospace" font-size="10" fill="#7a7670" letter-spacing="0.08em">THE SCORECARD</text>
+          <line x1="354" y1="174" x2="400" y2="126" stroke="#c8c4be" stroke-width="0.5" stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+          <text x="406" y="126" font-family="'DM Mono', monospace" font-size="10" fill="#7a7670" letter-spacing="0.08em">THE REVIEW</text>
+          <line x1="354" y1="235" x2="400" y2="194" stroke="#c8c4be" stroke-width="0.5" stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+          <text x="406" y="194" font-family="'DM Mono', monospace" font-size="10" fill="#7a7670" letter-spacing="0.08em">ADDITIONAL READING</text>
+          <line x1="354" y1="275" x2="400" y2="262" stroke="#c8c4be" stroke-width="0.5" stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+          <text x="406" y="262" font-family="'DM Mono', monospace" font-size="10" fill="#7a7670" letter-spacing="0.08em">FOLLOW-UP</text>
+        </svg>
+      </div>
+
+      <div class="included-list">
+        <div class="included-item">
+          <button class="item-toggle" onclick="toggleItem(this)" aria-expanded="false">
+            The Scorecard <span class="item-arrow">▾</span>
+          </button>
+          <div class="item-body" hidden>
+            <p>A rating of your plan across key dimensions: where it's strong, where it has gaps, and where it needs work. Gives you an at-a-glance view before you read the rest.</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <button class="item-toggle" onclick="toggleItem(this)" aria-expanded="false">
+            The Review <span class="item-arrow">▾</span>
+          </button>
+          <div class="item-body" hidden>
+            <p>A detailed, direct assessment of your plan: what's working, what isn't, and specifically what I'd change. Written to make sure the plan is realistic and achievable for a small company without a full-time marketing person.</p>
+            <ul class="review-bullets">
+              <li>Whether the plan is actually achievable given your resources, your market, and where you are right now</li>
+              <li>Whether there are risks or obstacles the plan doesn't account for</li>
+              <li>What the AI didn't know to include: the gaps specific to your market and your situation that only come from experience</li>
+            </ul>
+          </div>
+        </div>
+        <div class="included-item">
+          <button class="item-toggle" onclick="toggleItem(this)" aria-expanded="false">
+            Additional Reading <span class="item-arrow">▾</span>
+          </button>
+          <div class="item-body" hidden>
+            <p>Three to five resources curated for your specific situation. Not generic marketing advice, things that are actually relevant to where you are and what your plan is trying to do.</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <button class="item-toggle" onclick="toggleItem(this)" aria-expanded="false">
+            Follow-up <span class="item-arrow">▾</span>
+          </button>
+          <div class="item-body" hidden>
+            <p>A follow-up review at $99 within 90 days to make sure you get it right.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="included-meta">
+        Delivered by email within five business days.
+      </div>
+    </div>
   </section>
 
 </div>
+
+<script>
+function toggleItem(btn) {
+  const body = btn.nextElementSibling;
+  const expanded = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', !expanded);
+  body.hidden = expanded;
+}
+</script>
 </body>
 </html>
