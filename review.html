@@ -103,7 +103,6 @@
     letter-spacing: 0.005em;
     color: var(--ink);
     margin-bottom: 0.4rem;
-    max-width: 20ch;
   }
 
   .hero-line em {
@@ -125,11 +124,10 @@
   .lead {
     font-family: var(--serif);
     font-weight: 300;
-    font-size: 1.25rem;
+    font-size: clamp(1.05rem, 2.5vw, 1.2rem);
     line-height: 1.55;
     color: var(--ink);
     margin-bottom: 1rem;
-    max-width: 36ch;
   }
 
   .lead em {
@@ -169,11 +167,10 @@
 
   .intro-para p {
     font-family: var(--serif);
-    font-size: 1.15rem;
+    font-size: clamp(1.05rem, 2.5vw, 1.2rem);
     font-weight: 300;
     line-height: 1.65;
     color: var(--muted);
-    max-width: 38ch;
     margin-bottom: 1.25rem;
   }
 
