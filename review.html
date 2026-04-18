@@ -336,6 +336,17 @@
     gap: 0;
   }
 
+  .inline-link {
+    font-family: var(--serif);
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 0.1rem;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .inline-link:hover { color: var(--muted); border-color: var(--muted); }
+
   .review-bullets {
     list-style: none;
     padding: 0;
@@ -424,6 +435,16 @@
     color: var(--ink);
   }
 
+  .meta-sub {
+    margin-top: 0.35rem;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
   .included-meta {
     margin-top: 1.75rem;
     font-family: var(--mono);
@@ -501,11 +522,12 @@
     <div class="intro-para">
       <p>You used AI to write your marketing plan. It probably looks great on paper. The question is whether it will actually work for you, with your resources, in your market, at your stage.</p>
       <p>I've spent twenty years doing marketing for companies at every stage. I'll read your plan and give you a straightforward assessment of what's working, what isn't, and what to do about it. The kind of feedback that usually only comes from having a senior marketer on staff or hiring an expensive agency.</p>
+      <p>Email me your plan to get started.</p>
     </div>
 
     <div class="cta">
-      <a class="cta-button" href="#">Get your review</a>
-      <div class="meta">
+      <a class="cta-button" href="mailto:hello@ameliakrupnik.com?subject=Marketing%20Plan%20Review&body=Hi%20Amelia%2C%0A%0AI%27d%20like%20to%20request%20a%20marketing%20plan%20review.%20I%27ve%20attached%20my%20marketing%20plan%20below." target="_blank">Get your review</a>
+      <div class="meta" style="text-align:left;">
         <div>$250 introductory price</div>
       </div>
     </div>
@@ -603,7 +625,7 @@
             Follow-up <span class="item-arrow">▾</span>
           </button>
           <div class="item-body" hidden>
-            <p>A follow-up review at $99 within 90 days to make sure you get it right.</p>
+            <p>A follow-up review at $100 within 90 days to make sure you get it right. <a href="https://www.paypal.com/ncp/payment/3Y6ZLDM5M3MJJ" target="_blank" class="inline-link">Purchase follow-up.</a></p>
           </div>
         </div>
       </div>
